@@ -16,7 +16,7 @@ public class DivideByZero {
             throw new ArithmeticException();
         }
         finally {
-            System.out.println("Inside Finally");
+            System.out.println("Inside Finally ");
             throw new ArrayIndexOutOfBoundsException();
         }
     }
