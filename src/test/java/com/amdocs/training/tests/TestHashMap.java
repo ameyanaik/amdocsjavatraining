@@ -1,11 +1,15 @@
-package com.amdocs.training.conditions;
+package com.amdocs.training.tests;
+
+import org.testng.annotations.Test;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
-public class HashMapExample {
+public class TestHashMap {
 
-    public static void main(String[] args) {
+    @Test
+    public void testHashMap() {
         HashMap<String, Integer> map = new HashMap<String, Integer>();
 
         map.put("Emp1",1001);
@@ -21,16 +25,14 @@ public class HashMapExample {
             System.out.println(key + " : " + value);
         }
 
-        /*Iterator hmIterator = hm.entrySet().iterator();
+        Iterator iter = map.entrySet().iterator();
 
         // Iterate through the hashmap
-        // and add some bonus marks for every student
-        System.out.println("HashMap after adding bonus marks:");
+        System.out.println("HashMap");
 
-        while (hmIterator.hasNext()) {
-            Map.Entry mapElement = (Map.Entry)hmIterator.next();
-            int marks = ((int)mapElement.getValue() + 10);
-            System.out.println(mapElement.getKey() + " : " + marks);
-        }*/
+        while (iter.hasNext()) {
+            Map.Entry mapElement = (Map.Entry)iter.next();
+            System.out.println(mapElement.getKey());
+        }
     }
 }
